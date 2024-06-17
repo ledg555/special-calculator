@@ -6,7 +6,7 @@ class Vector {
 
   get r() {
     return Math.hypot(this.x, this.y);
-  },
+  }
   get theta() {
     if (this.x === 0) {
       if (this.y > 0) return Math.PI/2;
@@ -17,24 +17,20 @@ class Vector {
   get x() {
     this.xCoord = r*Math.cos(theta);
     return r*Math.cos(theta);
-  },
+  }
   get y() {
     this.yCoord = r*Math.sin(theta);
     return r*Math.sin(theta);
-  },
+  }
 
-  set r(value) {
-    return void;
-  },
-  set theta(value) {
-    return void;
-  },
+  set r(value) {}
+  set theta(value) {}
   set x(value) {
     this.xCoord = value;
-  },
+  }
   set y(value) {
     this.yCoord = value;
-  },
+  }
   
   inverse() {
     return new Vector(-this.x, -this.y);

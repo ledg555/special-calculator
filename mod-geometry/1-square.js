@@ -1,29 +1,25 @@
 class Square {
-  constructor() {}
+  a = 0;
+  d = 0;
+  P = 0;
+  A = 0;
 
-  get A() {
-    return this.a**2;
-  },
-  get P() {
-    return 4*this.a;
-  },
-  get diagonal() {
-    return Math.sqrt(2)*this.a;
-  },
-  get b() {
-    return this.A/this.a;
-  },
-
-  set A(value) {
-    return void;
-  },
-  set P(value) {
-    return void;
-  },
-  set a(value) {
-    return void;
-  },
-  set b(value) {
-    return void;
-  },
+  getA() {
+    this.A = a**2;
+  }
+  getP() {
+    this.P = 4*a;
+  }
+  getd() {
+    this.d = Math.sqrt(2)*this.a;
+  }
+  getaIfd() {
+    this.a = this.d/Math.sqrt(2);
+  }
+  getaIfP() {
+    this.a = this.P/4;
+  }
+  getaIfA() {
+    this.a = Math.sqrt(A);
+  }
 }

@@ -1,9 +1,7 @@
 class Circle {
-  constructor() {}
-
-  this.r = 0;
-  this.P = 0;
-  this.A = 0;
+  r = 0;
+  P = 0;
+  A = 0;
   
   getA() {
     this.A = Math.PI*this.r**2;
