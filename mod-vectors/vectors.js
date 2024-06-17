@@ -1,37 +1,30 @@
 class Vector {
   constructor(x, y) {
-    this.xCoord = x;
-    this.yCoord = y;
+    this.x = x;
+    this.y = y;
   }
 
-  get r() {
-    return Math.hypot(this.x, this.y);
+  gettheta() {
+    if (this.x === 0 && this.y === 0) this.theta = 0;
+    else if (x < 0) this.theta = Math.atan(this.y/this.x) + Math.PI;
+    else if (this.x >= 0 && this.y < 0) this.theta = 2*Math.PI + Math.atan(this.y/this.x);
+    else this.theta = Math.atan(this.y/this.x);
   }
-  get theta() {
-    if (this.x === 0) {
-      if (this.y > 0) return Math.PI/2;
-      else if (this.y < 0) return 3*Math.PI/2;
-      else return 0;
-    } else return this.x > 0 ? Math.atan(this.y/this.x): Math.atan(this.y/this.x) + Math.PI;
+  getr() {
+    this.r = Math.hypot(this.x, this.y);
   }
-  get x() {
-    this.xCoord = r*Math.cos(theta);
-    return r*Math.cos(theta);
+  getyIfxtheta() {
+    this.y = x*Math.tan(theta);
   }
-  get y() {
-    this.yCoord = r*Math.sin(theta);
-    return r*Math.sin(theta);
+  getxIfytheta() {
+    this.x = y/Math.tan(theta);
   }
-
-  set r(value) {}
-  set theta(value) {}
-  set x(value) {
-    this.xCoord = value;
+  getxIfrtheta() {
+    this.x = this.r*Math.cos(this.theta);
   }
-  set y(value) {
-    this.yCoord = value;
+  getyIfrtheta() {
+    this.y = this.r*Math.sin(this.theta);
   }
-  
   inverse() {
     return new Vector(-this.x, -this.y);
   }
@@ -47,7 +40,7 @@ class Vector {
   }
   
   static angDotProduct(a,b) {
-    return Math.acos(dotProd/(a.r*b.r));
+    return Math.acos(Vector.dotProduct(a, b)/(a.r*b.r));
   }
   
   static crossProduct(a, b) {
