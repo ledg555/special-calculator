@@ -1,0 +1,14 @@
+{
+  "name": "special-calculator",
+  "version": "1.0.0",
+  "description": "A calculator with arithmetics, geometry, algebra, vectors and matrix modules",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Delgado",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
