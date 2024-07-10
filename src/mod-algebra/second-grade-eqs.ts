@@ -1,4 +1,4 @@
-function solveSecondGradeEq([a, b, c]): number[] {
+function solveSecondGradeEq([a, b, c]: number[]): number[] {
   if (a === 0) {
     if (b === 0) {
       if (c === 0) return [Infinity]; // Infty, infinite solutions
